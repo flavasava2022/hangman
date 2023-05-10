@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.container {
+  border: 3px #b9525294 solid;
+  border-radius: 13px;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 100px auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0761a17d;
+}
+hr {
+  width: 100%;
+  height: 100%;
+  border-color: #b9525294;
+}
+.game-info {
+  padding: 0 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 30%;
+  justify-content: center;
+  align-items: center;
+}
+.game-info h4 {
+  margin-left: 20px;
+}
+.container .main {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container .main .letters {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.container .main .letters span {
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #b9525294;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+.container .main .letters span.clicked {
+  opacity: 0.5;
+  background-color: red;
+  pointer-events: none;
+}
+.container .main .letters span.right {
+  background-color: green;
+}
+.container .main .img {
+  height: 175px;
+  width: 75px;
+  overflow: hidden;
+}
+.container .main .img img {
+  position: relative;
+  top: 0;
+  right: -75px;
+  visibility: visible;
+}
+.container .guess-letters {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .guess-letters span {
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #b9525294;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}

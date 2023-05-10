@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css" />
+    <title>HangMan Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-info">
+        <h4>HangMan Game</h4>
+        <div class="categery">category : <span></span></div>
+      </div>
+      <hr />
+      <div class="main">
+        <div class="img">
+          <img src="/img/man.png" alt="" />
+        </div>
+        <div class="letters"></div>
+      </div>
+      <hr />
+      <div class="guess-letters"></div>
+    </div>
+    <audio id="success" src="/sounds/success.mp3" preload="auto"></audio>
+    <audio id="fail" src="/sounds/fail.mp3" preload="auto"></audio>
+    <script src="/script.js"></script>
+  </body>
+</html>
