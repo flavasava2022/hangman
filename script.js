@@ -74,13 +74,11 @@ lettersContainer.addEventListener("click", function (e) {
     e.target.classList.add("clicked");
     if (!guessboxes.includes(e.target.textContent)) {
       attempts++;
-      document.getElementById("fail").play();
       img.style.right = `${attempts * 75}px`;
     }
     guessboxes.forEach((letter, n) => {
       if (e.target.textContent === letter) {
         e.target.classList.add("right");
-        document.getElementById("success").play();
         won[n] = letter;
         guessLettersboxes.forEach((box, index) => {
           if (index === n) {
@@ -94,11 +92,11 @@ lettersContainer.addEventListener("click", function (e) {
   if (nero === word) {
     lettersContainer.style.pointerEvents = "none";
     let messege = document.querySelector(".guess-letters");
-    messege.textContent = `You Won The Word Is "${word}"`;
+    messege.textContent = `You Won The correct Word Is "${word}"`;
   }
   if (attempts === 6) {
     lettersContainer.style.pointerEvents = "none";
     let messege = document.querySelector(".guess-letters");
-    messege.textContent = `You Lost The Word Is "${word}"`;
+    messege.textContent = `You Lost The correct Word Is "${word}"`;
   }
 });
